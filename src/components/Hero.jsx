@@ -98,40 +98,111 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Results Card */}
+          {/* Enhanced Results Card */}
           <div className="w-full md:w-1/2 animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
-            <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 border-2 border-slate-100 hover:shadow-3xl transition-shadow duration-300">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-accent to-purple-600 flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <span className="text-2xl sm:text-3xl font-bold text-white">LM</span>
+            <div className="relative group">
+              {/* Animated glow background */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-accent via-purple-600 to-pink-600 rounded-3xl blur-lg opacity-25 group-hover:opacity-40 transition duration-1000 animate-pulse"></div>
+              
+              {/* Main card */}
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl p-6 sm:p-8 border border-slate-200/50 hover:border-accent/30 transition-all duration-300">
+                {/* Header with enhanced logo */}
+                <div className="text-center mb-6">
+                  <div className="relative inline-block mb-4">
+                    {/* Glow ring */}
+                    <div className="absolute -inset-2 bg-gradient-to-br from-accent via-purple-600 to-pink-600 rounded-full blur-md opacity-30 animate-pulse"></div>
+                    {/* Logo */}
+                    <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-accent via-purple-600 to-blue-600 flex items-center justify-center shadow-2xl shadow-accent/50">
+                      <span className="text-3xl sm:text-4xl font-extrabold text-white relative z-10">LM</span>
+                      {/* Inner shine */}
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-t from-transparent to-white/20"></div>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl sm:text-2xl font-extrabold bg-gradient-to-r from-slate-900 via-accent to-purple-600 bg-clip-text text-transparent mb-2">
+                    Proven Track Record
+                  </h3>
+                  <p className="text-sm text-slate-600 font-medium">
+                    Delivering excellence for <span className="text-accent font-bold">15+ years</span>
+                  </p>
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-slate-900">Proven Results</h3>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1">Real impact for real businesses</p>
-              </div>
 
-              <div className="space-y-4">
-                <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-4 border border-green-100">
-                  <div className="text-2xl sm:text-3xl font-bold text-green-700">$10M+</div>
-                  <div className="text-xs sm:text-sm text-green-600 font-medium">Transaction Volume Processed</div>
-                </div>
-              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg p-4 border border-blue-100">
-                <div className="text-2xl sm:text-3xl font-bold text-blue-700">500K+</div>
-                <div className="text-xs sm:text-sm text-blue-600 font-medium">Active Users (Android/iOS/Web)</div>
-              </div>
-                <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-4 border border-purple-100">
-                  <div className="text-2xl sm:text-3xl font-bold text-purple-700">95%</div>
-                  <div className="text-xs sm:text-sm text-purple-600 font-medium">AI Accuracy Rate</div>
-                </div>
-              </div>
+                {/* Stats with enhanced design */}
+                <div className="space-y-3">
+                  {/* Stat 1 */}
+                  <div className="relative group/stat overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl"></div>
+                    <div className="relative bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-4 sm:p-5 border-2 border-green-200/50 hover:border-green-400/50 transition-all hover:shadow-lg hover:shadow-green-200/50">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                            $10M+
+                          </div>
+                          <div className="text-xs sm:text-sm text-green-700 font-semibold mt-1">
+                            Transaction Volume
+                          </div>
+                        </div>
+                        <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center">
+                          <span className="text-2xl">💰</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-              <div className="mt-6 pt-6 border-t border-slate-200">
-                <div className="flex items-center justify-center gap-2 text-sm text-slate-600">
-                  <span className="flex items-center gap-1">
-                    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    Available Now
-                  </span>
-                  <span className="text-slate-300">•</span>
-                  <span>Response within 24h</span>
+                  {/* Stat 2 */}
+                  <div className="relative group/stat overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-xl"></div>
+                    <div className="relative bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-4 sm:p-5 border-2 border-blue-200/50 hover:border-blue-400/50 transition-all hover:shadow-lg hover:shadow-blue-200/50">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                            500K+
+                          </div>
+                          <div className="text-xs sm:text-sm text-blue-700 font-semibold mt-1">
+                            Active Users Globally
+                          </div>
+                        </div>
+                        <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center">
+                          <span className="text-2xl">👥</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Stat 3 */}
+                  <div className="relative group/stat overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl"></div>
+                    <div className="relative bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-4 sm:p-5 border-2 border-purple-200/50 hover:border-purple-400/50 transition-all hover:shadow-lg hover:shadow-purple-200/50">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                            95%
+                          </div>
+                          <div className="text-xs sm:text-sm text-purple-700 font-semibold mt-1">
+                            AI Accuracy Rate
+                          </div>
+                        </div>
+                        <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center">
+                          <span className="text-2xl">🎯</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Enhanced footer */}
+                <div className="mt-6 pt-6 border-t border-slate-200">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="flex items-center gap-2 px-3 py-1.5 bg-green-100 text-green-700 rounded-full font-semibold">
+                        <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        Available Now
+                      </span>
+                    </div>
+                    <div className="text-xs text-slate-600 font-medium">
+                      ⚡ Response in <span className="text-accent font-bold">24 hours</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
