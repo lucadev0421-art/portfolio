@@ -223,7 +223,13 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section id="work" className="py-8 sm:py-12 md:py-16 bg-white">
+    <section id="work" className="relative py-8 sm:py-12 md:py-16 bg-white/60 backdrop-blur-sm">
+      {/* Enhanced decorative elements */}
+      <div className="absolute top-10 right-10 w-28 h-28 border-2 border-purple-400/30 rounded-full animate-float-medium pointer-events-none shadow-lg shadow-purple-400/20"></div>
+      <div className="absolute bottom-20 left-10 w-20 h-20 bg-gradient-to-br from-accent/20 to-purple-500/20 rounded-lg animate-float-slow pointer-events-none shadow-xl shadow-accent/30"></div>
+      <div className="absolute top-1/3 left-20 w-14 h-14 border-2 border-cyan-400/30 rotate-45 animate-float-fast pointer-events-none"></div>
+      <div className="absolute bottom-1/3 right-1/4 w-16 h-16 bg-gradient-to-br from-pink-400/20 to-purple-400/20 rounded-full animate-float-medium pointer-events-none blur-sm"></div>
+      
       <div className="max-w-[var(--page-max)] mx-auto px-4 sm:px-6">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
           <div className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-xs sm:text-sm font-bold mb-4">

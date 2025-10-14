@@ -3,8 +3,13 @@ import React from "react";
 export default function Hero() {
   return (
     <section className="relative pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-purple-50/30 to-blue-50/20 -z-10"></div>
+      {/* Enhanced decorative floating shapes */}
+      <div className="absolute top-20 left-10 w-24 h-24 border-2 border-accent/30 rounded-lg animate-float-slow pointer-events-none shadow-lg shadow-accent/20"></div>
+      <div className="absolute top-40 right-20 w-20 h-20 border-2 border-purple-400/30 rounded-full animate-float-medium pointer-events-none shadow-lg shadow-purple-400/20"></div>
+      <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg animate-float-fast pointer-events-none shadow-xl shadow-cyan-400/30"></div>
+      <div className="absolute top-1/2 right-1/4 w-12 h-12 border-2 border-pink-400/30 rotate-45 animate-float-slow pointer-events-none"></div>
+      <div className="absolute bottom-40 right-10 w-14 h-14 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full animate-float-medium pointer-events-none blur-sm"></div>
+      <div className="absolute top-1/3 left-1/3 w-10 h-10 border-2 border-blue-400/20 rounded-lg animate-float-fast pointer-events-none"></div>
       
       <div className="max-w-[var(--page-max)] mx-auto px-4 sm:px-6">
         {/* Trust Badges - Immediate credibility */}
