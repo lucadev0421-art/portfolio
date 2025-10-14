@@ -23,7 +23,6 @@ export default function Contact() {
     setError("");
     
     try {
-      // Using Web3Forms - FREE email service
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -31,13 +30,12 @@ export default function Contact() {
           "Accept": "application/json",
         },
         body: JSON.stringify({
-          access_key: "YOUR_ACCESS_KEY_HERE", // Get free key from https://web3forms.com
+          access_key: "d9ebeba3-f4a7-4a41-bbe5-23fcf56051dc",
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          subject: `New Contact from ${formData.name}`,
-          from_name: "Portfolio Contact Form",
-          to: "lucadev0421@gmail.com"
+          subject: `Portfolio Contact from ${formData.name}`,
+          from_name: "Portfolio Website",
         }),
       });
 
@@ -47,10 +45,11 @@ export default function Contact() {
         setSent(true);
         setFormData({ name: "", email: "", message: "" });
       } else {
-        setError("Failed to send. Please try emailing directly: lucadev0421@gmail.com");
+        setError("Failed to send message. Please try again or email directly: lucadev0421@gmail.com");
       }
     } catch (err) {
-      setError("Failed to send. Please try emailing directly: lucadev0421@gmail.com");
+      console.error("Error:", err);
+      setError("Failed to send message. Please try again or email directly: lucadev0421@gmail.com");
     } finally {
       setLoading(false);
     }
@@ -162,10 +161,15 @@ export default function Contact() {
               <div className="p-8 bg-green-50 rounded-xl border-2 border-green-200 text-center">
                 <div className="text-5xl mb-3">✅</div>
                 <div className="font-bold text-lg text-green-800">Message Sent Successfully!</div>
-                <div className="text-sm text-green-700 mt-2">Thank you! I'll reply within 24 hours.</div>
+                <div className="text-sm text-green-700 mt-2">
+                  Thank you for reaching out! I'll get back to you within 24 hours.
+                </div>
+                <div className="mt-4 p-3 bg-white rounded-lg border border-green-200 text-xs text-slate-600">
+                  Your message has been delivered to <strong>lucadev0421@gmail.com</strong>
+                </div>
                 <button
                   onClick={() => setSent(false)}
-                  className="mt-4 text-sm text-accent hover:underline font-medium"
+                  className="mt-4 px-4 py-2 bg-accent text-white rounded-lg hover:bg-purple-700 transition font-medium"
                 >
                   Send another message
                 </button>
