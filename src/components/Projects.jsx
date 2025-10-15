@@ -4,7 +4,7 @@ const projects = [
   {
     title: "AI-Powered RAG Chatbot Platform",
     desc: "Enterprise SaaS with GPT-4, Claude, and custom RAG pipeline using FAISS & Pinecone for document retrieval. Handles 10K+ daily queries with 95% accuracy.",
-    tech: "Python · FastAPI · GPT-4 · FAISS · Pinecone · React · PostgreSQL · Kubernetes",
+    tech: "Python · FastAPI · GPT-4 · Pinecone · React · PostgreSQL · Kubernetes",
     category: "AI/ML",
     demo: "https://huggingface.co/chat",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&q=80"
@@ -144,7 +144,7 @@ function Modal({ project, onClose }) {
             </a>
           </div>
         </div>
-      </div>
+     // </div>
     </div>
   );
 }
@@ -223,7 +223,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section id="work" className="relative py-8 sm:py-12 md:py-16 bg-white/60 backdrop-blur-sm">
+    <section id="work" className="relative py-8 sm:py-12 md:py-16">
       {/* Enhanced decorative elements */}
       <div className="absolute top-10 right-10 w-28 h-28 border-2 border-purple-400/30 rounded-full animate-float-medium pointer-events-none shadow-lg shadow-purple-400/20"></div>
       <div className="absolute bottom-20 left-10 w-20 h-20 bg-gradient-to-br from-accent/20 to-purple-500/20 rounded-lg animate-float-slow pointer-events-none shadow-xl shadow-accent/30"></div>

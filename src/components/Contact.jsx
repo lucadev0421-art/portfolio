@@ -56,7 +56,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white/60 to-slate-50/60 backdrop-blur-sm">
+    <section id="contact" className="relative py-12 sm:py-16 md:py-20">
       {/* Enhanced decorative elements */}
       <div className="absolute top-20 left-5 w-24 h-24 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-full animate-float-slow pointer-events-none shadow-xl shadow-cyan-400/30"></div>
       <div className="absolute bottom-10 right-10 w-20 h-20 border-2 border-accent/30 rounded-lg animate-float-fast pointer-events-none shadow-lg shadow-accent/20"></div>
